@@ -1,9 +1,20 @@
-var a = 6;
-var h = 6;
-var triangleArea;
+var a = 3;
+var b = 6;
+var value;
 
-triangleArea = a*h/2 ;
+value = (a * a) - (2 * a * b) + (b * b);
 
+console.log(value);
 
-console.log('Triangle field with base a: ' + a + ' and height h: ' + h + ' is equal to: ' + triangleArea); 
+if (value > 0) {
+
+	console.log('wynik dodatni')
+
+} else if (value < 0) {
+
+	console.log('wynik ujemny')
+
+} else {
+	console.log('wynik wynosi 0')
+}
 
