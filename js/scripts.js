@@ -1,20 +1,12 @@
 var a = 3;
-var b = 6;
+var b = 1;
 var value;
 
 value = (a * a) - (2 * a * b) + (b * b);
 
 console.log(value);
 
-if (value > 0) {
+ (value > 0) ? console.log('wynik dodatni') : console.log('wynik ujemny')
 
-	console.log('wynik dodatni')
-
-} else if (value < 0) {
-
-	console.log('wynik ujemny')
-
-} else {
-	console.log('wynik wynosi 0')
-}
+	
 
