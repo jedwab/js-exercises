@@ -1,18 +1,20 @@
-var a = 3;
-var b = 9;
-var value;
+function getTriangleArea(a, h) {
 
-value = (a * a) - (2 * a * b) + (b * b);
-
-console.log(value);
-
-if ( value == 0) {
-	console.log('wynik wynosi zero')
-
-} else {
- (value > 0) ? console.log('wynik dodatni') : console.log('wynik ujemny')
+if ((a <= 0) || (h <= 0)) {
+		console.log('Nieprawidłowe dane');
+	}
+return a*h/2;
 }
+console.log(getTriangleArea(10, 6));
 
+var triangleArea = getTriangleArea(10, 15);
+console.log(triangleArea);
 
-	
+var triangleArea = getTriangleArea(6, 6);
+console.log(triangleArea);
 
+var triangleArea = getTriangleArea(11, 8);
+console.log(triangleArea);
+
+var triangleArea = getTriangleArea(0, 8);
+console.log(triangleArea);
