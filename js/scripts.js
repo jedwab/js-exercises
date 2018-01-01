@@ -5,6 +5,6 @@ function drawTree(n) {
 			star += '*';
 			}
 		console.log(star);
-		}
 	}
+}
 drawTree(5);
