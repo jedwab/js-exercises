@@ -1,6 +1,6 @@
-var ButtonItemsClass = document.getElementsByClassName('button');
+var buttonItemsClass = document.getElementsByClassName('button');
 
-for (i=0 ; i<ButtonItemsClass.length; i++) {
+for (i = 0 ; i<buttonItemsClass.length; i++) {
 	alert(ButtonItemsClass[i].innerText);
 }
 
