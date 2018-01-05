@@ -1,7 +1,9 @@
-var ButtonItemsClass = document.getElementsByClassName('button');
+var list = document.getElementById('list');
+var add = document.getElementById('addElem');
 
-for (i=0 ; i<ButtonItemsClass.length; i++) {
-	alert(ButtonItemsClass[i].innerText);
-}
-
-	
+add.addEventListener('click', function() {
+	var element = document.createElement('li');
+	var table = document.getElementsByTagName('li');
+	element.innerHTML = 'item ' +  table.length;
+	list.appendChild(element);
+})
