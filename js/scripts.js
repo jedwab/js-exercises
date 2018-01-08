@@ -1,21 +1,21 @@
 var newGameBtn = document.getElementById('js-newGameButton');
 
-	pickRock = document.getElementById('js-playerPick_rock');
-	pickPaper = document.getElementById('js-playerPick_paper');
-	pickScissors = document.getElementById('js-playerPick_scissors');
+pickRock = document.getElementById('js-playerPick_rock');
+pickPaper = document.getElementById('js-playerPick_paper');
+pickScissors = document.getElementById('js-playerPick_scissors');
 
-    newGameElem = document.getElementById('js-newGameElement');
-    pickElem = document.getElementById('js-playerPickElement');
-    resultsElem = document.getElementById('js-resultsTableElement');
+newGameElem = document.getElementById('js-newGameElement');
+pickElem = document.getElementById('js-playerPickElement');
+resultsElem = document.getElementById('js-resultsTableElement');
 
-	playerPointsElem = document.getElementById('js-playerPoints');
-    playerNameElem = document.getElementById('js-playerName');
-    computerPointsElem = document.getElementById('js-computerPoints');
-    
-	playerPickElem = document.getElementById('js-playerPick');
-    computerPickElem = document.getElementById('js-computerPick');
-    playerResultElem = document.getElementById('js-playerResult');
-    computerResultElem = document.getElementById('js-computerResult');
+playerPointsElem = document.getElementById('js-playerPoints');
+playerNameElem = document.getElementById('js-playerName');
+computerPointsElem = document.getElementById('js-computerPoints');
+   
+playerPickElem = document.getElementById('js-playerPick');
+computerPickElem = document.getElementById('js-computerPick');
+playerResultElem = document.getElementById('js-playerResult');
+computerResultElem = document.getElementById('js-computerResult');
 
 newGameBtn.addEventListener('click', newGame);
 pickRock.addEventListener('click', function() { playerPick('rock') });
