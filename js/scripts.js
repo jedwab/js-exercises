@@ -32,6 +32,7 @@ pickPaper.addEventListener('click', function() { playerPick('paper') });
 pickScissors.addEventListener('click', function() { playerPick('scissors') });
   
 
+
 function setGameElements() {
   switch(gameState) {
     case 'started':
@@ -50,7 +51,7 @@ function setGameElements() {
 }
 setGameElements();
 
-function resetScores () {
+function resetScores() {
    player.score = computer.score = 0;
 }
 
@@ -58,7 +59,6 @@ function newGame() {
   player.name = prompt('Please enter your name', 'imię gracza');
   if (player.name) {
     resetScores();
-    player.score = computer.score = 0;
     gameState = 'started';
     setGameElements();
 
