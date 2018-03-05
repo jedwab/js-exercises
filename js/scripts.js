@@ -3,6 +3,8 @@ var newGameBtn = document.getElementById('js-newGameButton');
 var pickRock = document.getElementById('js-playerPick_rock');
 var pickPaper = document.getElementById('js-playerPick_paper');
 var pickScissors = document.getElementById('js-playerPick_scissors');
+var pickLizard = document.getElementById('js-playerPick_lizard');
+var pickSpock = document.getElementById('js-playerPick_spock');
 
 var newGameElem = document.getElementById('js-newGameElement');
 var pickElem = document.getElementById('js-playerPickElement');
@@ -27,9 +29,11 @@ var computer = {
     };
 
 newGameBtn.addEventListener('click', newGame);
-pickRock.addEventListener('click', function() { playerPick('rock') });
-pickPaper.addEventListener('click', function() { playerPick('paper') });
-pickScissors.addEventListener('click', function() { playerPick('scissors') });
+pickRock.addEventListener('click', function() { playerPick('rock');});
+pickPaper.addEventListener('click', function() { playerPick('paper');});
+pickScissors.addEventListener('click', function() { playerPick('scissors');});
+pickLizard.addEventListener('click', function() { playerPick('lizard'); });
+pickSpock.addEventListener('click', function() { playerPick('Spock'); });
   
 
 
@@ -39,7 +43,7 @@ function setGameElements() {
         newGameElem.style.display = 'none';
         pickElem.style.display = 'block';
         resultsElem.style.display = 'block';
-      break;
+        break;
     case 'ended':
         newGameBtn.innerText = 'Jeszcze raz';
     case 'notStarted':
@@ -80,10 +84,13 @@ function checkRoundWinner(playerPick, computerPick) {
     if (playerPick == computerPick) {
         winnerIs = 'noone'; 
     } else if (
-        (computerPick == 'rock' &&  playerPick == 'scissors') ||
-        (computerPick == 'scissors' &&  playerPick == 'paper') ||
-        (computerPick == 'paper' &&  playerPick == 'rock')) {
-    roundWinner(computerResultElem, computer);
+        (computerPick === 'rock' &&  (playerPick === 'scissors' || playerPick === 'lizard')) ||
+		(computerPick === 'scissors' &&  (playerPick === 'paper' || playerPick === 'lizard')) ||
+		(computerPick === 'paper' &&  (playerPick === 'rock' || playerPick === 'Spock')) ||
+		(computerPick === 'lizard' &&  (playerPick === 'Spock' || playerPick === 'paper')) ||
+		(computerPick === 'Spock' &&  (playerPick === 'scissors' || playerPick === 'rock')))  {
+            
+            roundWinner(computerResultElem, computer);
     } else {
         roundWinner(playerResultElem, player);
     }
