@@ -6,6 +6,7 @@ var pickScissors = document.getElementById('js-playerPick_scissors');
 var pickLizard = document.getElementById('js-playerPick_lizard');
 var pickSpock = document.getElementById('js-playerPick_spock');
 
+
 var newGameElem = document.getElementById('js-newGameElement');
 var pickElem = document.getElementById('js-playerPickElement');
 var resultsElem = document.getElementById('js-resultsTableElement');
