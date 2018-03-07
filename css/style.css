@@ -1,12 +1,15 @@
 body {
 	background-color: #262C3A;
 	font-family: 'Montserrat', sans-serif;
+	color: #fff;
 }
 
-button {
-	margin-right: 10px;
+.game {
+	margin-top: 250px;
 }
-
+.btn {
+	margin-top: 20px;
+}
 
 h3, span  {
 	color: #fff;
@@ -41,3 +44,8 @@ img {
 .label-warning {
 	background-color: #83B3F3;
 }
+
+@media screen and (max-width: 992px) {
+	.game {
+		margin-top: 80px;
+	}
